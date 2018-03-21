@@ -1,9 +1,0 @@
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\bin\Debug\LectorVariablesEntorno.exe.config
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\bin\Debug\LectorVariablesEntorno.exe
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\bin\Debug\LectorVariablesEntorno.pdb
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\obj\Debug\LectorVariablesEntorno.csprojResolveAssemblyReference.cache
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\obj\Debug\LectorVariablesEntorno.csproj.CoreCompileInputs.cache
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\obj\Debug\LectorVariablesEntorno.exe
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\obj\Debug\LectorVariablesEntorno.pdb
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\bin\Debug\System.Management.Automation.dll
-C:\Users\diego.blazquez\source\repos\LectorVariablesEntorno\LectorVariablesEntorno\obj\Debug\LectorVariablesEntorno.csproj.CopyComplete
