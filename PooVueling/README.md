@@ -32,11 +32,11 @@ public class CalculadoraIntegrationTests
 
 ```C#
 // Con Xunit
-[Fact]
 public class CalculadoraXunitTests
 {
     ICalculadora iCalculadora = new Calculadora();
 
+    [Fact]
     public void SumaTest()
     {
         Assert.Equal(4, iCalculadora.Suma(2, 2));
