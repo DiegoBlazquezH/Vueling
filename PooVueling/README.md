@@ -15,7 +15,7 @@ Este proyecto es una primera toma de contacto con C# y las labores de testing. E
 A diferencia de MSTest2, Xunit utiliza el custom attribute [Fact] para indicar los métodos de testing. Por otro lado, la sintaxis de los asserts es ligeramente distinta. 
 
 ```C#
-// Con MXTest2
+// Con MSTest2
 [TestClass()]
 public class CalculadoraIntegrationTests
 {
@@ -26,19 +26,27 @@ public class CalculadoraIntegrationTests
     {
         Assert.IsTrue(iCalculadora.Division(10, 5) == 2);
     }
+    ...
 }
 ```
 
 ```C#
 // Con Xunit
 [Fact]
-        public void SumaTest()
-        {
-            Assert.Equal(4, iCalculadora.Suma(2, 2));
-            Assert.True(iCalculadora.Suma(3, 6) == 9);
-            Assert.False(iCalculadora.Suma(5, 3) == 10);
-        }
+public class CalculadoraXunitTests
+{
+    ICalculadora iCalculadora = new Calculadora();
+
+    public void SumaTest()
+    {
+        Assert.Equal(4, iCalculadora.Suma(2, 2));
+        Assert.True(iCalculadora.Suma(3, 6) == 9);
+        Assert.False(iCalculadora.Suma(5, 3) == 10);
+    }
+    ...
+}
 ```
 
-Para ejecutar el test con Xunit, debemos ir al directorio de la solución y ejecutar "packages\xunit.runner.console.2.2.0\tools\xunit.console" seguido del nombre de la dll de testeo (en este caso, PooVuelingXunitTests.dll):
+Para ejecutar el test con Xunit, debemos ir al directorio de la solución y ejecutar "packages\xunit.runner.console.2.2.0\tools\xunit.console" seguido de la ruta de la dll a testear (en este caso, PooVuelingXunitTests.dll):
 
+![](Imagenes/cap3.png?raw=true "Test con Xunit")
