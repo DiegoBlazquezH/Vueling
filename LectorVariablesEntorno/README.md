@@ -10,8 +10,8 @@ En este caso, la llamada al script de creación de la variable de entorno se rea
 
 Resultado si la variable no existe:
 
-![](Imagenes/cap1.png?raw=true)
+![](Imagenes/cap1.png?raw=true "Resultado si la variable no existe")
 
 Resultado si la variable ya existe:
 
-![](Imagenes/cap2.png?raw=true)
+![](Imagenes/cap2.png?raw=true "Resultado si la variable ya existe")
