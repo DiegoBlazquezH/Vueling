@@ -6,7 +6,9 @@ Este proyecto es una primera toma de contacto con C# y las labores de testing. E
 
 * PooVuelingTests contiene el código para realizar los tests con MSTestv2. Se han implementado un test sencillo por cada método a modo de prueba. Estos tests son llamados a través de la opción Pruebas->Ejecutar->Todas las pruebas. Hay que remarcar la utilización de los custom attributes [Test(Class)] y [TestMethod()] para indicar que son clases y métodos de testing, así como los métodos Assert.isTrue y Assert.isFalse para realizar las diferentes pruebas.
 
+<p align="center">
 ![](Imagenes/cap1.png?raw=true "Resultado positivo de los tests")
+</p>
 
 * PooVuelingXunitTests contiene el código para realizar los tests con Xunit. En primer lugar ha sido necesario utilizar el NuGet para instalar xunit y xunit.runner.console:
 
