@@ -14,7 +14,7 @@ Este proyecto es una primera toma de contacto con C# y las labores de testing. E
 
 A diferencia de MSTest2, Xunit utiliza el custom attribute [Fact] para indicar los métodos de testing. Por otro lado, la sintaxis de los asserts es ligeramente distinta. 
 
-```VisualStudio
+```C#
 // Con MXTest2
 [TestClass()]
 public class CalculadoraIntegrationTests
@@ -29,7 +29,7 @@ public class CalculadoraIntegrationTests
 }
 ```
 
-```VisualStudio
+```C#
 // Con Xunit
 [Fact]
         public void SumaTest()
