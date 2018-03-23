@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PooVueling;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PooVueling.Tests
 {
