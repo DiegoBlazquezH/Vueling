@@ -183,6 +183,7 @@ namespace PatronesAlumnos
         {
             int formato;
             string[] extensiones = new string[] { "", "TXT", "JSON" };
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
             Console.WriteLine("");
             Console.WriteLine("¿En qué formato quieres serializar los nuevos alumnos? Formato actual {0}", extensiones[Convert.ToInt32(ConfigurationManager.AppSettings["serializacionFichero"])]);
@@ -195,11 +196,16 @@ namespace PatronesAlumnos
             switch ((Extension)formato)
             {
                 case Extension.TXT:
-                    ConfigurationManager.AppSettings["serializacionFichero"] = Convert.ToString("1");
+                    
+                    config.AppSettings.Settings["serializacionFichero"].Value = Convert.ToString("1");
+                    config.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("appSettings");
                     Console.WriteLine("Formato cambiado a TXT");
                     break;
                 case Extension.JSON:
-                    ConfigurationManager.AppSettings["serializacionFichero"] = Convert.ToString("2");
+                    config.AppSettings.Settings["serializacionFichero"].Value = Convert.ToString("2");
+                    config.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("appSettings");
                     Console.WriteLine("Formato cambiado a JSON");
                     break;
                 default:
