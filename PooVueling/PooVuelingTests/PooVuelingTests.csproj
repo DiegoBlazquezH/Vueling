@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="CalculadoraIntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CalculadorIntegrationTests2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

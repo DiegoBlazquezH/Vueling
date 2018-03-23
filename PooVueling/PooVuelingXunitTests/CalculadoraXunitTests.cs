@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PooVueling;
 using Xunit;
 
-namespace PooVuelingXunitTests
+namespace PooVueling.XunitTests
 {
     public class CalculadoraXunitTests
     {
