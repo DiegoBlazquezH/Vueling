@@ -4,11 +4,9 @@ namespace PooVueling
 {
     class Program
     {
-        private static object exit;
-
         public enum Operador
         {
-            SUMA, RESTA, MULTIPLICACION, DIVISION
+            SUMA=1, RESTA, MULTIPLICACION, DIVISION
         }
 
         static void Main(string[] args)
@@ -33,11 +31,12 @@ namespace PooVueling
 
             Console.WriteLine("Indica la operación que quieres realizar:");
             Console.Write("1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Salir\nOperación:");
-            operacion = Convert.ToInt32(Console.ReadLine())-1;
+            operacion = Convert.ToInt32(Console.ReadLine());
 
             if (operacion == 5)
             {
                 Console.WriteLine("Adios");
+                Console.ReadKey();
                 return false;
             }
 
@@ -47,7 +46,6 @@ namespace PooVueling
             parametro2 = Convert.ToInt32(Console.ReadLine());
 
             switch ((Operador)operacion) {
-
                 case Operador.SUMA:
                     resultado = iCalculadora.Suma(parametro1, parametro2);
                     break;
@@ -60,6 +58,8 @@ namespace PooVueling
                 case Operador.DIVISION:
                     resultado = iCalculadora.Division(parametro1, parametro2);
                     break;
+                default:
+                    return true;
             }
             Console.WriteLine("El resultado es " + resultado);
             Console.WriteLine();
