@@ -12,14 +12,14 @@ namespace PatronesAlumnos
 {
     class Program
     {
-        public enum Opcion
+        public enum OpcionesMenu
         {
             CREAR = 1, CONFIGURACION, SALIR 
         }
 
         public enum Extension
         {
-            TXT = 1, JSON
+            TXT = 1, JSON, XML
         }
 
         static void Main(string[] args)
@@ -46,15 +46,15 @@ namespace PatronesAlumnos
             Console.Write("Opción:");
             opcion = Convert.ToInt32(Console.ReadLine());
 
-            switch ((Opcion)opcion)
+            switch ((OpcionesMenu)opcion)
             {
-                case Opcion.CREAR:
+                case OpcionesMenu.CREAR:
                     crearAlumno();
                     break;
-                case Opcion.CONFIGURACION:
+                case OpcionesMenu.CONFIGURACION:
                     Configuracion();
                     break;
-                case Opcion.SALIR:
+                case OpcionesMenu.SALIR:
                     Console.WriteLine("Adios");
                     Console.ReadKey();
                     return false;
@@ -67,7 +67,6 @@ namespace PatronesAlumnos
         static void crearAlumno()
         {
             string temp;
-            int temp2;
             Alumno nuevoAlumno = new Alumno();
             int serializacionFichero;
 
@@ -128,7 +127,7 @@ namespace PatronesAlumnos
             {
                 List<Alumno> alumnosFichero = new List<Alumno>();
                 // Leemos su contenido y desserializamos
-                using (StreamReader r = new StreamReader("alumnos.json"))
+                using (StreamReader r = new StreamReader(Path.GetFileName(this.Ruta)))
                 {
                     string json = r.ReadToEnd();
                     alumnosFichero = JsonConvert.DeserializeObject<List<Alumno>>(json);
@@ -196,7 +195,6 @@ namespace PatronesAlumnos
             switch ((Extension)formato)
             {
                 case Extension.TXT:
-                    
                     config.AppSettings.Settings["serializacionFichero"].Value = Convert.ToString("1");
                     config.Save(ConfigurationSaveMode.Modified);
                     ConfigurationManager.RefreshSection("appSettings");
