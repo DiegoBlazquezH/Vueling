@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Alumnos
 {
@@ -6,19 +7,25 @@ namespace Alumnos
     {
         public Alumno()
         {
+            GUID = Guid.NewGuid();
         }
 
         public Alumno(int IDout, string NombreOut, string ApellidosOut, string DNIOut) : base(IDout, NombreOut, ApellidosOut, DNIOut)
         {
         }
 
+        public Alumno(int IDout, string NombreOut, string ApellidosOut, string DNIOut, Guid GUIDOut) : base(IDout, NombreOut, ApellidosOut, DNIOut, GUIDOut)
+        {
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Alumno alumno &&
-                   ID == alumno.ID &&
-                   Nombre == alumno.Nombre &&
-                   Apellidos == alumno.Apellidos &&
-                   DNI == alumno.DNI;
+                   this.ID == alumno.ID &&
+                   this.Nombre == alumno.Nombre &&
+                   this.Apellidos == alumno.Apellidos &&
+                   this.DNI == alumno.DNI &&
+                   this.GUID == alumno.GUID;
         }
 
         public override int GetHashCode()
@@ -28,6 +35,8 @@ namespace Alumnos
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nombre);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Apellidos);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(DNI);
+            hashCode = hashCode * -1521134295 + GUID.GetHashCode();
+
             return hashCode;
         }
 

@@ -28,6 +28,7 @@ namespace Alumnos
             Console.WriteLine("Nombre: " + nuevoAlumno.Nombre);
             Console.WriteLine("Apellidos: " + nuevoAlumno.Apellidos);
             Console.WriteLine("DNI: " + nuevoAlumno.DNI);
+            Console.WriteLine("GUID: " + nuevoAlumno.GUID);
             Thread.Sleep(2000);
 
             return nuevoAlumno;

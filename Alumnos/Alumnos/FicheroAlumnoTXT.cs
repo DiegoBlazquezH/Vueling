@@ -25,7 +25,7 @@ namespace Alumnos
         {
             using (StreamWriter sw = File.AppendText(Ruta))
             {
-                sw.WriteLine("{0},{1},{2},{3}", alumno.ID, alumno.Nombre, alumno.Apellidos, alumno.DNI);
+                sw.WriteLine("{0},{1},{2},{3},{4}", alumno.ID, alumno.Nombre, alumno.Apellidos, alumno.DNI, alumno.GUID);
             }
         }
     }
