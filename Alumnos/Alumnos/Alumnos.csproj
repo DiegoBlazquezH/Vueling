@@ -53,6 +53,7 @@
     <Compile Include="FicheroAlumnoFactory.cs" />
     <Compile Include="FicheroAlumnoJSON.cs" />
     <Compile Include="FicheroAlumnoTXT.cs" />
+    <Compile Include="FileUtils.cs" />
     <Compile Include="Interfaces\IFicheroAlumno.cs" />
     <Compile Include="Interfaces\IFicheroFactory.cs" />
     <Compile Include="Menu.cs" />

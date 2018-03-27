@@ -1,4 +1,6 @@
-﻿namespace Alumnos.Interfaces
+﻿using System.Collections.Generic;
+
+namespace Alumnos.Interfaces
 {
     public interface IFicheroAlumno
     {

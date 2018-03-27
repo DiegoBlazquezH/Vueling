@@ -7,7 +7,7 @@ using static Alumnos.Enums.ExtensionesFicheros;
 
 namespace Alumnos.Interfaces
 {
-    interface IFicheroFactory
+    public interface IFicheroFactory
     {
         IFicheroAlumno CrearFichero(Extension extension);
     }
