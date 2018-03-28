@@ -13,11 +13,11 @@ https://answers.microsoft.com/es-es/windows/forum/windows_10-update-winpc/window
 
 3.- Habilitar Vitualización:
 
-* En HP, pulsar Esc al arrancar el portatil para acceder a la Bios, en opciones avanzadas habilitar la virtualización. Guardar y Reinciar.
+* En HP, pulsar Esc al arrancar el portatil para acceder a la Bios, en opciones avanzadas habilitar la virtualización. Guardar y Reiniciar.
 
 * En Lenovo, pulsar F1/F2 (depende del modelo creo) al arrancar el portatil para acceder a la Bios, habilitar virtualización en la opción indicada para ello.
 
-4.- Habilitar Hyper-V (la opción manual del link es la más sencilla de aplicar)y reiniciar:
+4.- Habilitar Hyper-V (la opción manual del link es la más sencilla de aplicar) y reiniciar:
 
 https://docs.microsoft.com/es-es/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 
