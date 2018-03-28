@@ -7,15 +7,15 @@ Requisitos:
 
 1.- Si está instalado Docker (y no funciona), desinstalar antes de actualizar a 1709.
 
-2.- Actualizar Windows 10 a la versión 1709. Si da error varias veces, solución:
+2.- Actualizar Windows 10 a la versión 1709, tarda bastante. Si da error varias veces, solución:
 
 https://answers.microsoft.com/es-es/windows/forum/windows_10-update-winpc/windows-10-error-0x80070652-al-instalar/b11ca401-c74e-405e-8cf8-3a0a8dde9074
 
-3.- Habilitar Vitualización
+3.- Habilitar Vitualización:
 
-    En HP, pulsar Esc al arrancar el portatil para acceder a la Bios, en opciones avanzadas habilitar la virtualización. Guardar y Reinciar.
+En HP, pulsar Esc al arrancar el portatil para acceder a la Bios, en opciones avanzadas habilitar la virtualización. Guardar y Reinciar.
 
-	En Lenovo, pulsar F1/F2 (depende del modelo creo) al arrancar el portatil para acceder a la Bios, habilitar virtualización en la opción indicada para ello.
+En Lenovo, pulsar F1/F2 (depende del modelo creo) al arrancar el portatil para acceder a la Bios, habilitar virtualización en la opción indicada para ello.
 
 4.- Habilitar Hyper-V y reiniciar (la opción manual es la más sencilla de aplicar):
 
