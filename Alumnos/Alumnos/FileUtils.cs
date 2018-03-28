@@ -34,7 +34,9 @@ namespace Alumnos
 
         public static void CrearFichero(string Ruta)
         {
-
+            using (StreamWriter sw = File.CreateText(Ruta))
+            {
+            }
         }
     }
 }

@@ -11,21 +11,24 @@ namespace AlumnosTests
     [TestClass]
     public class FicheroAlumnoJSONTests
     {
+        IFicheroFactory factory = new FicheroAlumnoFactory();
+        IFicheroAlumno ficheroAlumnos = null;
+
         [TestInitialize()]
         public void Initialize()
         {
-            
+            factory = new FicheroAlumnoFactory();
+            ficheroAlumnos = factory.CrearFichero(Extension.JSON);
+            FileUtils.CrearFichero(ficheroAlumnos.Ruta);
         }
         
 
-        [DataRow(1, "Diego", "Blazquez", "70910782B")]
-        /*[DataRow(2, "Alberto", "Diaz", "12345678Z")]
-        [DataRow(3, "Amaia", "Viñegra", "98765432A")]*/
+        [DataRow(3, "Diego", "Blazquez", "70910782B")]
+        [DataRow(2, "Alberto", "Diaz", "12345678Z")]
+        [DataRow(1, "Amaia", "Viñegra", "98765432A")]
         [DataTestMethod]
         public void AñadirTest(int ID, string Nombre, string Apellidos, string DNI)
         {
-            IFicheroFactory factory = new FicheroAlumnoFactory();
-            IFicheroAlumno ficheroAlumnos = factory.CrearFichero(Extension.JSON);
             List<Alumno> alumnosFicheroExistente = null;
 
             Alumno alumnoNuevo = new Alumno(ID, Nombre, Apellidos, DNI);
@@ -35,8 +38,7 @@ namespace AlumnosTests
 
             alumnosFicheroExistente = FileUtils.LeerFicheroJson(ficheroAlumnos.Ruta);
 
-            Assert.IsTrue(alumnoNuevo.Equals(alumnosFicheroExistente[0]));
-
+            Assert.IsTrue(alumnoNuevo.Equals(alumnosFicheroExistente[alumnosFicheroExistente.Count-1]));
         }
 
     }

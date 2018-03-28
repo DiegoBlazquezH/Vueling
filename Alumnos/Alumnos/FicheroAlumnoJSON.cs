@@ -21,7 +21,7 @@ namespace Alumnos
         public void Añadir(Alumno alumno)
         {
             List<Alumno> alumnosFicheroExistente = new List<Alumno>();
-            if (File.Exists(Ruta))
+            if (File.Exists(Ruta) && new FileInfo(Ruta).Length != 0)
             {
                 alumnosFicheroExistente = FileUtils.LeerFicheroJson(Ruta);
             }

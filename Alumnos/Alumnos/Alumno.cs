@@ -42,7 +42,7 @@ namespace Alumnos
 
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format("{0},{1},{2},{3},{4}", ID, Nombre, Apellidos, DNI, GUID);
         }
     }
 }
