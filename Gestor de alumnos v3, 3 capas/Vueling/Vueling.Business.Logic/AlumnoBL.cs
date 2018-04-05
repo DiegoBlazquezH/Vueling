@@ -28,7 +28,7 @@ namespace Vueling.Business.Logic
             return ficheroAlumno.Add(alumno);
         }
 
-        private int CalcularEdad(DateTime fechaCompletaActual, DateTime fechaNacimiento)
+        public int CalcularEdad(DateTime fechaCompletaActual, DateTime fechaNacimiento)
         {
             return (Convert.ToInt32((fechaCompletaActual - fechaNacimiento).TotalDays) / 365);
         }
